@@ -19,6 +19,19 @@
   transform: translateY(-50%);
 }
 
+.center{
+	.display(flex);
+	.align-items(center);
+	.justify-content(center);	
+}
+
+.v-center{
+	.display(flex);
+	.flex-direction(column);
+	.align-items(center);
+	.justify-content(center);	
+}
+
 .after-line(@size:20px, @color:#000, @height:2px){
 	&:after{
 		position:absolute;
@@ -62,15 +75,6 @@
 	position:fixed;
 	top:0;
 	left:0;
-}
-
-.v-center(@height:50%, @width:50%){
-	width: @width;
-	height: @height;
-	// overflow: auto;
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .no-text-select{
@@ -221,15 +225,6 @@
 		-ms-filter: brightness(@brightness);
 		filter: brightness(@brightness);
 	}
-
-/*	Sprites
-	============================= */	
-	@spriteGrid: 64px;
-	.sprite(@x, @y) {
-	   background: url(../images/flags-sprite.png) no-repeat;
-	   background-position: -((@x - 1) * @spriteGrid) -( (@y - 1) * @spriteGrid);
-	   display:block;
-	}	
 
 
 	/* Shapes
